@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Poppins:wght@300&display=swap');
+
+:root {
+  --first: 'Pacifico', cursive;
+  --second: 'Poppins', sans-serif;
+  --third: 'Lobster Two', cursive;
+  --lightmodeback: white;
+  --lightmodecolor: #1d1d1d;
+  --footergradiant: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--second);
+}
+
+body {
+  position: relative;
+}
+
+/* Card section */
+.card {
+  width: 500px;
+  background-color: #f3f3f3 !important;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 15px auto;
+  padding: 10px;
+  transition: 0.5s ease;
+}
+
+.card:hover {
+  background-color: #1d1d1d !important;
+  color: #f3f3f3;
+}
+
+.card:hover .iconcontent {
+  background-color: #f3f3f3;
+}
+
+.card:hover .iconcontent .icon {
+  color: #1d1d1d;
+}
+
+.card .title {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .content h5 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.card .content span {
+  font-weight: bold;
+}
+
+.card .created {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.card .created p {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card .iconcontent {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #1d1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card .icon {
+  color: #f3f3f3;
+  font-size: 25px;
+}
+
+.storydata a:link {
+  text-decoration: none;
+}
+
+.storydata a {
+  color: #1d1d1d;
+}
+
+.storydata:hover a {
+  color: #1d1d1d;
+}
+
+.card button {
+  padding: 10px 20px;
+  background-color: #1d1d1d;
+  color: #f3f3f3;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card:hover button {
+  background-color: #f3f3f3;
+  color: #1d1d1d;
+}
