@@ -6,6 +6,14 @@ const reducer = (state, action) => {
                 data: action.payload.data,
                 noofpage: action.payload.noofpage,
             };
+        case "postremove": {
+            return {
+                ...state,
+                data: state.data.filter(element => {
+                    return (element.objectID !== action.payload);
+                })
+            }
+        }
     }
     return state;
 }

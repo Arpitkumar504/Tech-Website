@@ -18,6 +18,7 @@ const Stories = () => {
                                 comment={num_comments}
                                 created={created_at.slice(0, 10)}
                                 url={url}
+                                object={objectID}
                             />
                         )
                     })

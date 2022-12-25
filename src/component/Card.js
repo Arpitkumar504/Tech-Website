@@ -1,7 +1,9 @@
 import React from 'react'
 import { MdDelete } from 'react-icons/md'
+import { useGlobalContext } from '../context/Context'
 
-const Card = ({ title, author, comment, created, url }) => {
+const Card = ({ title, author, comment, created, url, object }) => {
+  const { removepost } = useGlobalContext();
   return (
     <div className="card">
       <div className='title'>
@@ -22,7 +24,7 @@ const Card = ({ title, author, comment, created, url }) => {
         <div>
           <a href={url} target="_blank" rel="noopener"><button type='button'>Read More</button></a>
         </div>
-        <div className='iconcontent'>
+        <div className='iconcontent' onClick={() => { removepost(object) }}>
           <MdDelete className='icon' />
         </div>
       </div>
