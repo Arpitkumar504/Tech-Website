@@ -37,12 +37,19 @@ const AppProvider = ({ children }) => {
             payload: postid
         })
     }
-    
+
+    const searchpost = (searchdata) => {
+        dispatch({
+            type: "postsearch",
+            payload: searchdata,
+        })
+    }
+
     useEffect(() => {
         getdata(`${api}&query=${state.query}`);
     }, [state.query])
     return (
-        <Appcontext.Provider value={{ ...state, removepost }}>
+        <Appcontext.Provider value={{ ...state, removepost, searchpost }}>
             {children}
         </Appcontext.Provider>
     )

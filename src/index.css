@@ -129,3 +129,43 @@ body {
   background-color: #f3f3f3;
   color: #1d1d1d;
 }
+
+/* search section */
+.searchbox{
+  margin: 30px;
+}
+
+.searchbox .heading{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.searchbox .search input{
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 0 5px;
+}
+
+.searchbox .search input::placeholder{
+  color: #1d1d1d;
+}
+
+.searchbox .search{
+  border: 2px solid black;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  margin: 10px auto;
+}
+
+.searchbox .search .icon{
+  width: 40px;
+  width: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}

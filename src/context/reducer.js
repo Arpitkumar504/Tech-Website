@@ -14,6 +14,12 @@ const reducer = (state, action) => {
                 })
             }
         }
+        case "postsearch":{
+            return{
+                ...state,
+                query:action.payload,
+            }
+        }
     }
     return state;
 }
