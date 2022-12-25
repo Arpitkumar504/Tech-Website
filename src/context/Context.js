@@ -9,7 +9,7 @@ const intialstate = {
     isLoading: true,
     query: "react",
     page: 0,
-    nbpages: 0,
+    noofpages: 0,
 };
 
 
@@ -23,7 +23,7 @@ const AppProvider = ({ children }) => {
                 type: "getstory",
                 payload: {
                     data: datas.data.hits,
-                    noofpage: datas.nbPages,
+                    noofpage: datas.data.nbPages,
                 }
             })
         } catch (error) {
@@ -45,11 +45,23 @@ const AppProvider = ({ children }) => {
         })
     }
 
+    const prev = () => {
+        dispatch({
+            type: "prevpage",
+        })
+    }
+
+    const next = () => {
+        dispatch({
+            type: "nextpage",
+        })
+    }
+
     useEffect(() => {
-        getdata(`${api}&query=${state.query}`);
-    }, [state.query])
+        getdata(`${api}&query=${state.query}&page=${state.page}`);
+    }, [state.query, state.page])
     return (
-        <Appcontext.Provider value={{ ...state, removepost, searchpost }}>
+        <Appcontext.Provider value={{ ...state, removepost, searchpost, prev, next }}>
             {children}
         </Appcontext.Provider>
     )

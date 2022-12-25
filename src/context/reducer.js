@@ -4,7 +4,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 data: action.payload.data,
-                noofpage: action.payload.noofpage,
+                noofpages: action.payload.noofpage,
             };
         case "postremove": {
             return {
@@ -14,11 +14,32 @@ const reducer = (state, action) => {
                 })
             }
         }
-        case "postsearch":{
-            return{
+        case "postsearch": {
+            return {
                 ...state,
-                query:action.payload,
+                query: action.payload,
             }
+        }
+        case "prevpage": {
+            let pagenum = state.page - 1;
+            if (pagenum <= 0) {
+                pagenum = 0;
+            }
+            return {
+                ...state,
+                page: pagenum,
+            }
+        }
+        case "nextpage": {
+            let pagenum = state.page + 1;
+            if (pagenum >= state.noofpage) {
+                pagenum = 0;
+            }
+            return {
+                ...state,
+                page: pagenum,
+            }
+
         }
     }
     return state;
