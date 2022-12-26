@@ -102,6 +102,12 @@ body {
   font-size: 25px;
 }
 
+@media(max-width:576px) {
+  .card {
+    width: 300px;
+  }
+}
+
 .storydata a:link {
   text-decoration: none;
 }
@@ -180,6 +186,16 @@ body {
   width: 40px;
   font-size: 25px;
   font-weight: bold;
+}
+
+@media(max-width:576px) {
+  .search {
+    width: 300px !important;
+  }
+
+  .search input {
+    width: 250px;
+  }
 }
 
 /* pagination section */
