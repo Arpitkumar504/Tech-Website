@@ -18,6 +18,9 @@ const AppProvider = ({ children }) => {
 
     const getdata = async (url) => {
         try {
+            dispatch({
+                type: "setloading",
+            })
             const datas = await axios.get(url);
             dispatch({
                 type: "getstory",
@@ -40,6 +43,9 @@ const AppProvider = ({ children }) => {
 
     const searchpost = (searchdata) => {
         dispatch({
+            type: "setloading",
+        })
+        dispatch({
             type: "postsearch",
             payload: searchdata,
         })
@@ -47,11 +53,17 @@ const AppProvider = ({ children }) => {
 
     const prev = () => {
         dispatch({
+            type: "setloading",
+        })
+        dispatch({
             type: "prevpage",
         })
     }
 
     const next = () => {
+        dispatch({
+            type: "setloading",
+        })
         dispatch({
             type: "nextpage",
         })

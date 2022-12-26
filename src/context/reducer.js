@@ -1,17 +1,24 @@
 const reducer = (state, action) => {
     switch (action.type) {
+        case "setloading": {
+            return {
+                ...state,
+                isLoading: true,
+            }
+        }
         case "getstory":
             return {
                 ...state,
                 data: action.payload.data,
                 noofpages: action.payload.noofpage,
-            };
+                isLoading: false,
+            }
         case "postremove": {
             return {
                 ...state,
                 data: state.data.filter(element => {
                     return (element.objectID !== action.payload);
-                })
+                }),
             }
         }
         case "postsearch": {

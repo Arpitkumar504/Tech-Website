@@ -130,6 +130,18 @@ body {
   color: #1d1d1d;
 }
 
+.story {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story h5 {
+  font-weight: bold;
+}
+
 /* search section */
 .searchbox {
   margin: 30px;

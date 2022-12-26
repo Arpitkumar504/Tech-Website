@@ -1,9 +1,18 @@
 import React from 'react'
+import { BsFillClockFill } from 'react-icons/bs'
 import { useGlobalContext } from '../context/Context'
 import Card from '../component/Card.js'
 
 const Stories = () => {
-    const { data } = useGlobalContext();
+    const { data, isLoading } = useGlobalContext();
+    if (isLoading) {
+        return (
+            <div className="story">
+                <h5>Loading... <BsFillClockFill /></h5>
+            </div>
+        )
+    }
+
     return (
         <div className='container'>
             <div className="storydata">
@@ -26,6 +35,7 @@ const Stories = () => {
             </div>
         </div>
     )
+
 }
 
 export default Stories
