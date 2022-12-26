@@ -3,7 +3,7 @@ import axios from 'axios';
 import reducer from './reducer.js'
 
 const Appcontext = createContext();
-const api = "http://hn.algolia.com/api/v1/search?query=react";
+const api = "https://hn.algolia.com/api/v1/search?";
 const intialstate = {
     data: [],
     isLoading: true,

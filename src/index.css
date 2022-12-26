@@ -106,6 +106,14 @@ body {
   .card {
     width: 300px;
   }
+
+  .card .title {
+    height: 120px;
+  }
+}
+
+.storydata {
+  margin: 50px 0;
 }
 
 .storydata a:link {
